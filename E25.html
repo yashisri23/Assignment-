@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background: pink;
+        }
+        
+        .container {
+            padding: 50px;
+            background-color: lightblue;
+            height: 100%;
+            width: 50vw;
+            margin-left: 17rem;
+            background: burlywood;
+            border-radius: 0.4em;
+            box-shadow: 0 1.3em 1.8em rgba(94, 72, 181, 0.25);
+        }
+        
+        input[type=text],
+        input[type=password],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+        
+        div {
+            padding: 10px 0;
+        }
+        
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+        
+        .registerbtn {
+            background-color: brown;
+            color: white;
+            padding: 16px 20px;
+            margin-left: 17rem;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <center>
+                <h1 style="color:brown;"> Student Registeration Form</h1>
+            </center>
+            <hr>
+            <label> Firstname </label>
+            <input type="text" name="firstname" placeholder="Firstname" size="15" required />
+            <label> Lastname: </label>
+            <input type="text" name="lastname" placeholder="Lastname" size="15" required />
+            <div>
+                <label> User Id: </label>
+                <input type="text" name="uid" placeholder="User ID" size="15" required />
+            </div>
+            <label>Contact Number:</label>
+            <input type="text" name="country code" placeholder="Country Code" value="+91" size="2" />
+            <input type="text" name="phone" placeholder="Contact Number" size="10" required /> Current Address :
+            <textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+        </textarea>
+            <label for="email"><b>Email ID</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Retype Password" name="psw-repeat" required>
+            <button type="submit" class="registerbtn">Register</button>
+    </form>
+</body>
+
+</html>

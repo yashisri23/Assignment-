@@ -1,0 +1,70 @@
+<html>  
+  <head>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        body {
+            background-color: orange;
+        }
+        #display{
+            font-family:'Courier New', Courier, monospace;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            word-spacing: 0.4em;
+            font-size: 2em;
+            width: 15em;
+            height:5em;
+            background: olivedrab;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            padding: 4.5em 1.3em;
+            border-radius: 0.4em;
+            box-shadow: 0 1.3em 1.8em rgba(94, 72, 181, 0.25);
+        }
+    </style>
+  </head>
+  <body>
+    <div id="display" onclick="hide()">
+
+    </div>  
+    <script>  
+        var welcome;  
+        var date = new Date();  
+        var hour = date.getHours();  
+        var minute = date.getMinutes();  
+        var second = date.getSeconds();  
+        if (minute < 10) 
+        {  
+            minute = "0" + minute;  
+        }  
+        if (second < 10) 
+        {  
+            second = "0" + second;  
+        }  
+        if (hour < 12) 
+        {  
+            welcome = "good morning";  
+        } 
+        else if (hour < 17) 
+        {  
+            welcome = "good afternoon";  
+        } 
+        else 
+        {  
+            welcome = "good evening";  
+        }  
+        document.getElementById('display').innerHTML=welcome;
+        document.write("<br>" + hour + ":" + minute + ":" + second);    
+        function hide()
+        {
+            document.getElementById('display').style.display='none';
+        }  
+    </script>  
+  </body>  
+</html> 

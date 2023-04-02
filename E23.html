@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .card {
+            width: 33%;
+            background-color: beige;
+            box-shadow: 2px 2px 4px blue;
+            position: relative;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+            height: 700px;
+        }
+        
+        .card>img {
+            width: 100%;
+            height: 60%;
+        }
+        
+        .date {
+            font-weight: bold;
+            font-family: cursive;
+            color: black;
+            font-size: 30px;
+            position: absolute;
+            text-decoration: underline;
+            background-color: rgba(199, 96, 96, 0.7);
+            width: 40%;
+            left: 20px;
+            top: 57%;
+            transform: rotate(-5deg);
+        }
+        
+        .desc {
+            padding: 10px;
+        }
+        
+        .desc>h2 {
+            color: burlywood;
+            font-size: 30px;
+            font-family: monospace;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        .desc>p {
+            text-align: justify;
+            color: blue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display:flex;justify-content:center;">
+        <script>
+            images = ["13.jpg", "14.jpg", "15.jpg"];
+            titles = ["Annual Function", "Workshop", "Guest lecture"];
+            intro = ["This is an Event", "This is very important event", "Hello Event"];
+            dates = ["22/02/2023", "23/02/2023", "24/02/2023"];
+            for (i = 0; i < 3; i++) {
+                var card = '<div class="card">' +
+                    '<img src="images/' + images[i] + '" />' + '<div class="date">' + dates[i] + '</div>' +
+                    '<br><div class="desc">' +
+                    '<h2>' + titles[i] + '</h2>' +
+                    '<p>' + intro[i] + '</p></div></div>'
+                document.write(card);
+            }
+        </script>
+    </div>
+</body>
+
+</html>

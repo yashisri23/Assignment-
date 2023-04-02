@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing:border-box;
+            }
+            #display{
+            font-family:'Courier New', Courier, monospace;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            word-spacing: 0.4em;
+            font-size: 2em;
+            width: 15em;
+            height:5em;
+            background: pink;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            padding: 4.5em 1.3em;
+            border-radius: 0.4em;
+            box-shadow: 0 1.3em 1.8em rgba(94, 72, 181, 0.25);
+        }
+        </style>
+    </head>
+    <body>
+        <div id="display">
+
+        </div>
+        <script>
+            function clock()
+            {
+                d=new Date();
+                hour=d.getHours();
+                var hr;
+                var minute = d.getMinutes();  
+                var second = d.getSeconds();  
+                if (minute < 10)  
+                     minute = "0" + minute; 
+                if (second < 10) 
+                    second = "0" + second;   
+                if(hour==12)
+                    hr="Noon";
+                else if(hour==0)
+                {
+                    hour=12;
+                    hr="Midnight";
+                }
+                else if(hour>0 && hour<12)
+                    hr="AM";
+                else
+                {
+                    hour="0"+hour-12;
+                    hr="PM";
+                }
+                cTime=d.getHours()+":"+minute+":"+second+" "+hr;
+                document.getElementById('display').innerHTML = cTime;
+            }
+            var x=setInterval(clock,1000);
+        </script>
+    </body>
+</html>
